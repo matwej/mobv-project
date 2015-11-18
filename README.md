@@ -1,47 +1,15 @@
-# searchViewToolbar
-Implementation searchView in Toolbar with RecyclerView as result set
-
-For education purposes I give to you example demo how to implement :
-
-  - **SearchRecentSuggestionsProvider**
-  - **SearchView Widget in Toolbar**
-  - **Drawer Menu**
+# MOBV
+Android application as school project
 
 ### Version
 1.0
 
 ### Documentation
 
-http://developer.android.com/guide/topics/providers/content-providers.html
-
-http://developer.android.com/guide/topics/search/adding-custom-suggestions.html
-
-http://developer.android.com/guide/topics/search/adding-recent-query-suggestions.html
-
-http://developer.android.com/reference/android/content/SearchRecentSuggestionsProvider.html
-
-http://developer.android.com/guide/topics/search/search-dialog.html
-
-http://developer.android.com/guide/topics/search/searchable-config.html
-
-http://developer.android.com/guide/topics/ui/actionbar.html
-
-http://developer.android.com/training/implementing-navigation/nav-drawer.html
-
-
-### Installation
-You need Git to download repository, or download ZIP archive
-
-```sh
-$ git clone [git-repo-url] searchViewToolbar
-```
-
-You need Android SDK and Android Studio (or Eclipse ADT, ...) to build project.
-
 License
 ----
 
-Copyright 2015 Maros Cavojsky, (mpage.sk)
+Copyright 2015 Matej Pivarci
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
