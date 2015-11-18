@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MobvProjekt</string>
+    <string name="label">MOBV</string>
+
+    <!-- drawer -->
+    <string name="drawer_open">Otvoriť</string>
+    <string name="drawer_close">Zatvoriť</string>
+    <string name="profile_name">Priezvisko, Meno</string>
+    <string name="profile_user_id">login</string>
+    <string name="profile_icon_desc">Fotka</string>
+    <string name="menu_item_text">Položka</string>
+
+    <!-- login -->
+    <string name="prompt_email">Login</string>
+    <string name="prompt_password">Heslo</string>
+    <string name="action_sign_in">Prihlásiť</string>
+    <string name="error_field_required">Potrebné</string>
+
+    <!-- profile fragment -->
+    <string name="profile_label_first_name">Meno:</string>
+    <string name="profile_label_surname">Priezvisko:</string>
+    <string name="profile_label_account">Účet:</string>
+
+    <!-- first task -->
+    <string name="generate">Náhodné číslo</string>
+    <string name="results_id">ID:</string>
+
+    <!-- main activity -->
+    <string name="welcome_label">Vitajte</string>
+    <string name="settings">Nastavenia</string>
+
+</resources>
