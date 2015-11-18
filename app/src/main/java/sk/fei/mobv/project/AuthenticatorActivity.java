@@ -31,10 +31,6 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
         super.onCreate(icicle);
         setContentView(R.layout.activity_login);
         mAccountManager = AccountManager.get(getBaseContext());
-        Account[] accounts = mAccountManager.getAccounts();
-        if (accounts.length == 1) {
-            startMainActivity();
-        }
 
         String accountName = getIntent().getStringExtra(ARG_ACCOUNT_NAME);
         mAuthTokenType = getIntent().getStringExtra(ARG_AUTH_TYPE);

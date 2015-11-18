@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorAccent">@color/accent_color</item>
+        <item name="colorAccent">@color/black_color</item>
         <item name="android:actionMenuTextColor">@color/white_color</item>
         <item name="android:windowAnimationStyle">@null</item>
     </style>

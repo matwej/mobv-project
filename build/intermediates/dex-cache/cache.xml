@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/home/matwej/AndroidStudioProjects/searchViewToolbar/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="/home/matwej/AndroidStudioProjects/searchViewToolbar/app/build/intermediates/pre-dexed/debug/classes-25cc4ffef8a86e71d1dc3bab7ba922f1bf98b00b.jar" />
-    </item>
-    <item
         jar="/home/matwej/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
-        <dex dex="/home/matwej/AndroidStudioProjects/searchViewToolbar/app/build/intermediates/pre-dexed/debug/gson-2.4-f439093e8c48c951bd2b6d1b63bdff1a616ae0f0.jar" />
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/gson-2.4-f439093e8c48c951bd2b6d1b63bdff1a616ae0f0.jar" />
     </item>
     <item
-        jar="/home/matwej/AndroidStudioProjects/searchViewToolbar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/home/matwej/AndroidStudioProjects/searchViewToolbar/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-7ed47ddde8c9fa1faa4cc757a67872ccc2d1711f.jar" />
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-c2df418efb557626ec2635fb764647d1edd0efbc.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-a3839f6203dc9e9099e6b96e158c18072cf9f24d.jar" />
     </item>
     <item
         jar="/home/matwej/android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/home/matwej/AndroidStudioProjects/searchViewToolbar/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-4a12b5b985fc706737f3dd5aa43a7f2000e33299.jar" />
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-4a12b5b985fc706737f3dd5aa43a7f2000e33299.jar" />
     </item>
     <item
-        jar="/home/matwej/AndroidStudioProjects/searchViewToolbar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-3a2adf19d9037169d011bd8fdf8094d788b566e2.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/home/matwej/AndroidStudioProjects/searchViewToolbar/app/build/intermediates/pre-dexed/debug/classes-3ce52e9092715db89bda9feb7f9771522b17d477.jar" />
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-b8dca30b6a03e078ed1703096e699a26bff8df65.jar" />
     </item>
     <item
-        jar="/home/matwej/AndroidStudioProjects/searchViewToolbar/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="/home/matwej/AndroidStudioProjects/searchViewToolbar/app/build/intermediates/pre-dexed/debug/classes-2a995cfe73957013af01f6cbb6681c2c45bcb9ee.jar" />
-    </item>
-    <item
-        jar="/home/matwej/AndroidStudioProjects/searchViewToolbar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/home/matwej/AndroidStudioProjects/searchViewToolbar/app/build/intermediates/pre-dexed/debug/classes-aa2effc344d0e85543a366c9281157e4188fb217.jar" />
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-d75be0670d94359f6d13d07cbd42006f8575aacb.jar" />
     </item>
 
 </items>
