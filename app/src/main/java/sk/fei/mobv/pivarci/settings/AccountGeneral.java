@@ -1,7 +1,7 @@
-package sk.fei.mobv.project.settings;
+package sk.fei.mobv.pivarci.settings;
 
-import sk.fei.mobv.project.api.MyServerApi;
-import sk.fei.mobv.project.api.ServerApi;
+import sk.fei.mobv.pivarci.api.MyServerApi;
+import sk.fei.mobv.pivarci.api.ServerApi;
 
 public class AccountGeneral {
     public static final String ACCOUNT_TYPE = "sk.fei.mobv";

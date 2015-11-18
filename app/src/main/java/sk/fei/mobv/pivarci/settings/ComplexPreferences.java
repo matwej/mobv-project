@@ -1,4 +1,4 @@
-package sk.fei.mobv.project.settings;
+package sk.fei.mobv.pivarci.settings;
 
 import java.lang.reflect.Type;
 import android.content.Context;

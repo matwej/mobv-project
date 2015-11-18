@@ -1,4 +1,4 @@
-package sk.fei.mobv.project.api;
+package sk.fei.mobv.pivarci.api;
 
 import android.util.Log;
 
@@ -17,7 +17,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
 
-import sk.fei.mobv.project.model.User;
+import sk.fei.mobv.pivarci.model.User;
 
 @SuppressWarnings("deprecation")
 public class MyServerApi implements ServerApi {

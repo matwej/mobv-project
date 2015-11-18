@@ -1,4 +1,4 @@
-package sk.fei.mobv.project.auth;
+package sk.fei.mobv.pivarci.auth;
 
 import android.accounts.AbstractAccountAuthenticator;
 import android.accounts.Account;
@@ -11,12 +11,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 
 
-import sk.fei.mobv.project.AuthenticatorActivity;
-import sk.fei.mobv.project.model.User;
-import sk.fei.mobv.project.settings.AccountGeneral;
+import sk.fei.mobv.pivarci.AuthenticatorActivity;
+import sk.fei.mobv.pivarci.model.User;
+import sk.fei.mobv.pivarci.settings.AccountGeneral;
 
 import static android.accounts.AccountManager.KEY_BOOLEAN_RESULT;
-import static sk.fei.mobv.project.settings.AccountGeneral.S_SERVER_API;
+import static sk.fei.mobv.pivarci.settings.AccountGeneral.S_SERVER_API;
 
 public class MyAuthenticator extends AbstractAccountAuthenticator {
 

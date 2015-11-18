@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package sk.fei.mobv.project.drawer;
+package sk.fei.mobv.pivarci.drawer;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -26,7 +26,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import sk.fei.mobv.project.R;
+import sk.fei.mobv.pivarci.R;
 
 
 public class CustomAdapter extends BaseAdapter {

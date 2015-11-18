@@ -1,11 +1,11 @@
-package sk.fei.mobv.project.services;
+package sk.fei.mobv.pivarci.services;
 
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
-import sk.fei.mobv.project.auth.MyAuthenticator;
+import sk.fei.mobv.pivarci.auth.MyAuthenticator;
 
 public class MyAuthenticatorService extends Service {
     @Nullable

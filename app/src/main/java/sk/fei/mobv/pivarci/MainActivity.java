@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package sk.fei.mobv.project;
+package sk.fei.mobv.pivarci;
 
 import android.accounts.AccountManager;
 import android.content.res.Configuration;
@@ -37,14 +37,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import sk.fei.mobv.project.drawer.CustomAdapter;
-import sk.fei.mobv.project.drawer.MenuItemObject;
-import sk.fei.mobv.project.fragments.FirstTaskFragment;
-import sk.fei.mobv.project.fragments.GeneralFragment;
-import sk.fei.mobv.project.fragments.ProfileFragment;
-import sk.fei.mobv.project.model.User;
-import sk.fei.mobv.project.settings.AccountGeneral;
-import sk.fei.mobv.project.settings.ComplexPreferences;
+import sk.fei.mobv.pivarci.drawer.CustomAdapter;
+import sk.fei.mobv.pivarci.drawer.MenuItemObject;
+import sk.fei.mobv.pivarci.fragments.FirstTaskFragment;
+import sk.fei.mobv.pivarci.fragments.GeneralFragment;
+import sk.fei.mobv.pivarci.fragments.ProfileFragment;
+import sk.fei.mobv.pivarci.model.User;
+import sk.fei.mobv.pivarci.settings.AccountGeneral;
+import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 
 public class MainActivity extends AppCompatActivity {
 

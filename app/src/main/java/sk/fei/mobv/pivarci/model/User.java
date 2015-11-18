@@ -1,4 +1,4 @@
-package sk.fei.mobv.project.model;
+package sk.fei.mobv.pivarci.model;
 
 
 import android.os.Parcel;

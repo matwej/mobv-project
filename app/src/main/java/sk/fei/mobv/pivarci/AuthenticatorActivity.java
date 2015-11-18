@@ -1,4 +1,4 @@
-package sk.fei.mobv.project;
+package sk.fei.mobv.pivarci;
 
 import android.accounts.Account;
 import android.accounts.AccountAuthenticatorActivity;
@@ -10,11 +10,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import sk.fei.mobv.project.model.User;
-import sk.fei.mobv.project.settings.AccountGeneral;
-import sk.fei.mobv.project.settings.ComplexPreferences;
+import sk.fei.mobv.pivarci.model.User;
+import sk.fei.mobv.pivarci.settings.AccountGeneral;
+import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 
-import static sk.fei.mobv.project.settings.AccountGeneral.S_SERVER_API;
+import static sk.fei.mobv.pivarci.settings.AccountGeneral.S_SERVER_API;
 
 public class AuthenticatorActivity extends AccountAuthenticatorActivity {
     public final static String ARG_ACCOUNT_TYPE = "ACCOUNT_TYPE";

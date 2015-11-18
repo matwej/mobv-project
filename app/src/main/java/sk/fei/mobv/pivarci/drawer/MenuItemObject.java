@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package sk.fei.mobv.project.drawer;
+package sk.fei.mobv.pivarci.drawer;
 
 public class MenuItemObject {
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package sk.fei.mobv.project.fragments;
+package sk.fei.mobv.pivarci.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -23,7 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import sk.fei.mobv.project.R;
+import sk.fei.mobv.pivarci.R;
 
 public class GeneralFragment extends Fragment {
 

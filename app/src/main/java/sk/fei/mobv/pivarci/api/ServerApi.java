@@ -1,7 +1,7 @@
-package sk.fei.mobv.project.api;
+package sk.fei.mobv.pivarci.api;
 
 
-import sk.fei.mobv.project.model.User;
+import sk.fei.mobv.pivarci.model.User;
 
 public interface ServerApi {
     User userSignIn(final String username, final String password);

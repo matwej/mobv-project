@@ -1,19 +1,18 @@
-package sk.fei.mobv.project.fragments;
+package sk.fei.mobv.pivarci.fragments;
 
 import android.accounts.AccountManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import sk.fei.mobv.project.R;
-import sk.fei.mobv.project.model.User;
-import sk.fei.mobv.project.settings.AccountGeneral;
-import sk.fei.mobv.project.settings.ComplexPreferences;
+import sk.fei.mobv.pivarci.R;
+import sk.fei.mobv.pivarci.model.User;
+import sk.fei.mobv.pivarci.settings.AccountGeneral;
+import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 
 public class ProfileFragment extends Fragment {
 
