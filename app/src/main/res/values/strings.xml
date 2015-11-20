@@ -29,4 +29,8 @@
     <string name="welcome_label">Vitajte</string>
     <string name="settings">Nastavenia</string>
 
+    <!-- second task -->
+    <string name="name">Meno</string>
+    <string name="distance">Vzdialenosť</string>
+
 </resources>

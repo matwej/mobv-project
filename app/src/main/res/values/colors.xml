@@ -5,5 +5,7 @@
     <color name="grey_color">#464646</color>
     <color name="drawer_color">#40513a</color>
     <color name="white_color">#FFFFFF</color>
+    <color name="dark_green">#1c431c</color>
+    <color name="light_green">#54a754</color>
 
 </resources>
