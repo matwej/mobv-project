@@ -36,7 +36,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import sk.fei.mobv.pivarci.drawer.CustomAdapter;
 import sk.fei.mobv.pivarci.drawer.MenuItemObject;
 import sk.fei.mobv.pivarci.fragments.FirstTaskFragment;

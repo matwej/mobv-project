@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 
-
 import sk.fei.mobv.pivarci.AuthenticatorActivity;
 import sk.fei.mobv.pivarci.model.User;
 import sk.fei.mobv.pivarci.settings.AccountGeneral;

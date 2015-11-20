@@ -11,7 +11,6 @@ import java.util.List;
 
 import sk.fei.mobv.pivarci.R;
 import sk.fei.mobv.pivarci.model.LocationItem;
-import sk.fei.mobv.pivarci.services.PoiViewHolder;
 
 public class RVAdapter extends RecyclerView.Adapter<PoiViewHolder> {
 

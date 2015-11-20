@@ -1,8 +1,6 @@
 package sk.fei.mobv.pivarci.api;
 
-import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.os.AsyncTask;
 import android.util.Log;
 

@@ -1,11 +1,12 @@
 package sk.fei.mobv.pivarci.settings;
 
-import java.lang.reflect.Type;
 import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 
 public class ComplexPreferences {
 
