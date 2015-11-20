@@ -41,6 +41,7 @@ import sk.fei.mobv.pivarci.drawer.MenuItemObject;
 import sk.fei.mobv.pivarci.fragments.FirstTaskFragment;
 import sk.fei.mobv.pivarci.fragments.GeneralFragment;
 import sk.fei.mobv.pivarci.fragments.ProfileFragment;
+import sk.fei.mobv.pivarci.fragments.SecondTaskFragment;
 import sk.fei.mobv.pivarci.model.User;
 import sk.fei.mobv.pivarci.settings.AccountGeneral;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
@@ -143,6 +144,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 1:
                 fragment = new FirstTaskFragment();
+                break;
+            case 2:
+                fragment = new SecondTaskFragment();
                 break;
             default:
                 fragment = new GeneralFragment();

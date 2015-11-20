@@ -42,7 +42,7 @@ public class RVAdapter extends RecyclerView.Adapter<PoiViewHolder> {
         String id = String.valueOf(pois.get(i).getId());
 
         if(pois.get(i).isClosest())
-            poiViewHolder.getCv().setBackgroundColor(Color.GREEN);
+            poiViewHolder.getCv().setBackgroundColor(Color.RED);
 
         poiViewHolder.getId().setText(id);
         poiViewHolder.getName().setText(name);

@@ -66,7 +66,7 @@ public class OverpassApi extends AsyncTask<String, Void, List<LocationItem>> {
     }
 
     protected void onPostExecute(List<LocationItem> items) {
-        //caller.onBackgroundTaskCompleted(items);
+        //caller.onBackgroundTaskCompleted(items); TODO
     }
 
 

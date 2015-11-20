@@ -32,5 +32,6 @@
     <!-- second task -->
     <string name="name">Meno</string>
     <string name="distance">Vzdialenosť</string>
+    <string name="refresh_poi">Obnoviť POI</string>
 
 </resources>
