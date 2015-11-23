@@ -30,10 +30,10 @@ public class MyOverpassApi <T extends OverpassInt> extends AsyncTask<String, Voi
 
     public MyOverpassApi(T caller, String amenity, Double minLat, Double minLon, Double maxLat, Double maxLon) {
         this.caller = caller;
-        this.minLat = String.format("%.5g", minLat);
-        this.minLon = String.format("%.5g", minLon);
-        this.maxLat = String.format("%.5g", maxLat);
-        this.maxLon = String.format("%.5g", maxLon);
+        this.minLat = String.format("%.7g", minLat);
+        this.minLon = String.format("%.7g", minLon);
+        this.maxLat = String.format("%.7g", maxLat);
+        this.maxLon = String.format("%.7g", maxLon);
         if(amenity == null) this.amenity = "pub"; // default poi type
         else this.amenity = amenity;
     }

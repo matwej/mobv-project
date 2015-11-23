@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
     private RecyclerView recyclerView;
     private Double lat = 48.151923;
     private Double lon = 17.074021;
-    private int maxDistance = 1500;
+    private int maxDistance = 2000;
     private String poi_type = "pub";
     private BboxHolder bboxHolder;
 
@@ -50,11 +50,23 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
         recyclerView.setLayoutManager(llm);
 
         ((TextView) rootView.findViewById(R.id.max_distance_value)).setText(String.valueOf(maxDistance) + "m");
+        Button button = (Button) rootView.findViewById(R.id.refresh_poi);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                submitOnClick();
+            }
+        });
 
         bboxHolder.calculate(lat, lon, maxDistance);
         new MyOverpassApi<SecondTaskFragment>
-                (this,poi_type,bboxHolder.getMinLat(),bboxHolder.getMinLon(),bboxHolder.getMaxLat(),bboxHolder.getMaxLon())
-                .execute();
+                (
+                        this,
+                        poi_type,
+                        bboxHolder.getMinLat(),
+                        bboxHolder.getMinLon(),
+                        bboxHolder.getMaxLat(),
+                        bboxHolder.getMaxLon()
+                ).execute();
 
         return rootView;
     }
@@ -63,6 +75,20 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
     public void onBackgroundTaskCompleted(List<LocationItem> items) {
         rvAdapter.setPois(getItemsWithinDistance(items));
         recyclerView.setAdapter(rvAdapter);
+    }
+
+    public void submitOnClick() {
+        // setCurrentLocation();
+        bboxHolder.calculate(lat, lon, maxDistance);
+        new MyOverpassApi<SecondTaskFragment>
+                (
+                        this,
+                        poi_type,
+                        bboxHolder.getMinLat(),
+                        bboxHolder.getMinLon(),
+                        bboxHolder.getMaxLat(),
+                        bboxHolder.getMaxLon()
+                ).execute();
     }
 
     private List<LocationItem> getItemsWithinDistance(List<LocationItem> items) {
@@ -90,7 +116,11 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
 
     private static String distance(double lat1, double lon1, double lat2, double lon2) {
         double theta = lon1 - lon2;
-        double dist = Math.sin(BboxHolder.deg2rad(lat1)) * Math.sin(BboxHolder.deg2rad(lat2)) + Math.cos(BboxHolder.deg2rad(lat1)) * Math.cos(BboxHolder.deg2rad(lat2)) * Math.cos(BboxHolder.deg2rad(theta));
+        double dist = Math.sin(BboxHolder.deg2rad(lat1))
+                * Math.sin(BboxHolder.deg2rad(lat2))
+                + Math.cos(BboxHolder.deg2rad(lat1))
+                * Math.cos(BboxHolder.deg2rad(lat2))
+                * Math.cos(BboxHolder.deg2rad(theta));
         dist = Math.acos(dist);
         dist = BboxHolder.rad2deg(dist);
         dist = dist * 60 * 1.1515;
