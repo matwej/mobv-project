@@ -7,7 +7,7 @@ public class LocationEntity {
     private String version;
     private String generator;
     private Map<String, String> osm3s;
-    private List<LocationItem> items;
+    private List<LocationItem> elements;
 
     public LocationEntity() {
     }
@@ -36,11 +36,11 @@ public class LocationEntity {
         this.osm3s = osm3s;
     }
 
-    public List<LocationItem> getItems() {
-        return items;
+    public List<LocationItem> getElements() {
+        return elements;
     }
 
-    public void setItems(List<LocationItem> items) {
-        this.items = items;
+    public void setElements(List<LocationItem> elements) {
+        this.elements = elements;
     }
 }

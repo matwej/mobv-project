@@ -3,10 +3,35 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/location_label"
+        android:text="@string/max_distance_label"
+        android:textSize="20sp"
+        android:layout_marginBottom="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_color"/>
+
+    <TextView
+        android:id="@+id/max_distance_value"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_color"
+        />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/refresh_poi"
         android:id="@+id/refresh_poi"
         android:layout_gravity="center_horizontal" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/poi_rv"
+        android:layout_margin="10dp"
+        android:background="@color/cardview_light_background"
+        />
 </LinearLayout>

@@ -18,8 +18,7 @@ import static sk.fei.mobv.pivarci.settings.AccountGeneral.S_SERVER_API;
 
 public class FirstTaskFragment extends Fragment {
 
-
-    TextView mId;
+    private ComplexPreferences complexPreferences;
 
     public FirstTaskFragment() {
         // Empty constructor required for fragment subclasses
@@ -30,10 +29,10 @@ public class FirstTaskFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_first_task, container, false);
 
-        ComplexPreferences complexPreferences = ComplexPreferences.getComplexPreferences(getActivity(), AccountGeneral.PREFS, Context.MODE_PRIVATE);
+        complexPreferences = ComplexPreferences.getComplexPreferences(getActivity(), AccountGeneral.PREFS, Context.MODE_PRIVATE);
         final User user = complexPreferences.getObject("user", User.class);
 
-        mId = (TextView) rootView.findViewById(R.id.results_id);
+        TextView mId = (TextView) rootView.findViewById(R.id.results_id);
         mId.setText(String.valueOf(user.getUser_id()));
 
         final TextView textView = (TextView) rootView.findViewById(R.id.results_number);

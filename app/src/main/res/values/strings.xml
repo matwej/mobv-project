@@ -33,5 +33,6 @@
     <string name="name">Meno</string>
     <string name="distance">Vzdialenosť</string>
     <string name="refresh_poi">Obnoviť POI</string>
+    <string name="max_distance_label">Maximálna vzdialenosť:</string>
 
 </resources>

@@ -1,6 +1,5 @@
 package sk.fei.mobv.pivarci.api;
 
-import android.app.Fragment;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -19,28 +18,39 @@ import java.util.List;
 import sk.fei.mobv.pivarci.model.LocationEntity;
 import sk.fei.mobv.pivarci.model.LocationItem;
 
-public class OverpassApi extends AsyncTask<String, Void, List<LocationItem>> {
+public class MyOverpassApi <T extends OverpassInt> extends AsyncTask<String, Void, List<LocationItem>> {
 
-    private String api_url = "http://overpass-api.de/api/interpreter?data=[out:json];";
-    Fragment caller;
+    private String url = "http://overpass-api.de/api/interpreter?data=[out:json];";
+    private T caller;
+    private String amenity;
+    private String minLat;
+    private String maxLat;
+    private String minLon;
+    private String maxLon;
 
-    public OverpassApi(Fragment caller) {
+    public MyOverpassApi(T caller, String amenity, Double minLat, Double minLon, Double maxLat, Double maxLon) {
         this.caller = caller;
+        this.minLat = String.format("%.5g", minLat);
+        this.minLon = String.format("%.5g", minLon);
+        this.maxLat = String.format("%.5g", maxLat);
+        this.maxLon = String.format("%.5g", maxLon);
+        if(amenity == null) this.amenity = "pub"; // default poi type
+        else this.amenity = amenity;
     }
 
     @Override
     protected List<LocationItem> doInBackground(String... params) {
 
-        api_url += "node[amenity=restaurant]";
-        api_url += "(48.14456,16.99362,48.19367,17.10932);";
-        api_url += "out;";
+        url += "node[amenity="+amenity+"]";
+        url += "("+minLat+","+minLon+","+maxLat+","+maxLon+");";
+        url += "out;";
 
-        Log.d("qqq", "overpass api url: " + api_url);
+        Log.d("ourl", url);
 
         StringBuilder result = new StringBuilder();
         HttpURLConnection urlConnection;
         try {
-            URL url = new URL(api_url);
+            URL url = new URL(this.url);
 
             urlConnection = (HttpURLConnection) url.openConnection();
             InputStream in = new BufferedInputStream(urlConnection.getInputStream());
@@ -57,7 +67,7 @@ public class OverpassApi extends AsyncTask<String, Void, List<LocationItem>> {
 
         LocationEntity oe = new Gson().fromJson(result.toString(), LocationEntity.class);
         List<LocationItem> items = new ArrayList<>();
-        for(LocationItem item: oe.getItems()) {
+        for(LocationItem item: oe.getElements()) {
             if(item.getTags().get("name") != null)
                 items.add(item);
         }
@@ -66,7 +76,7 @@ public class OverpassApi extends AsyncTask<String, Void, List<LocationItem>> {
     }
 
     protected void onPostExecute(List<LocationItem> items) {
-        //caller.onBackgroundTaskCompleted(items); TODO
+        caller.onBackgroundTaskCompleted(items);
     }
 
 
