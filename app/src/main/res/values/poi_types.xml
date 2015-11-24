@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="poi_types_array">
+        <item>pub</item>
+        <item>bar</item>
+        <item>cafe</item>
+        <item>restaurant</item>
+        <item>college</item>
+        <item>library</item>
+        <item>school</item>
+        <item>university</item>
+    </string-array>
+</resources>

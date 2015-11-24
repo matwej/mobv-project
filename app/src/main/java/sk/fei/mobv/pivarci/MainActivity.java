@@ -42,6 +42,7 @@ import sk.fei.mobv.pivarci.fragments.FirstTaskFragment;
 import sk.fei.mobv.pivarci.fragments.GeneralFragment;
 import sk.fei.mobv.pivarci.fragments.ProfileFragment;
 import sk.fei.mobv.pivarci.fragments.SecondTaskFragment;
+import sk.fei.mobv.pivarci.fragments.SettingsFragment;
 import sk.fei.mobv.pivarci.model.User;
 import sk.fei.mobv.pivarci.settings.AccountGeneral;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
@@ -201,6 +202,14 @@ public class MainActivity extends AppCompatActivity {
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
-        return super.onOptionsItemSelected(item);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        switch(item.getItemId()) {
+            case R.id.settings:
+                Fragment fragment = new SettingsFragment();
+                fragmentManager.beginTransaction().replace(R.id.main_fragment_container, fragment).commit();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

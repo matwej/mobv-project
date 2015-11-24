@@ -1,5 +1,6 @@
 package sk.fei.mobv.pivarci.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -19,8 +20,13 @@ import sk.fei.mobv.pivarci.api.OverpassInt;
 import sk.fei.mobv.pivarci.model.LocationItem;
 import sk.fei.mobv.pivarci.services.BboxHolder;
 import sk.fei.mobv.pivarci.services.RVAdapter;
+import sk.fei.mobv.pivarci.settings.AccountGeneral;
+import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 
 public class SecondTaskFragment extends Fragment implements OverpassInt {
+
+    public static final String DISTANCE_KEY = "distance";
+    public static final String POI_TYPE_KEY = "poitype";
 
     private RVAdapter rvAdapter;
     private RecyclerView recyclerView;
@@ -29,6 +35,7 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
     private int maxDistance = 2000;
     private String poi_type = "pub";
     private BboxHolder bboxHolder;
+    private ComplexPreferences complexPreferences;
 
     public SecondTaskFragment() {
         // Empty constructor required for fragment subclasses
@@ -36,6 +43,9 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        complexPreferences = ComplexPreferences.getComplexPreferences(getActivity().getApplicationContext(), AccountGeneral.PREFS, Context.MODE_PRIVATE);
+        if(complexPreferences.getObject(DISTANCE_KEY, Integer.class) != null)
+            maxDistance = complexPreferences.getObject(DISTANCE_KEY, Integer.class);
         rvAdapter = new RVAdapter(getActivity(), maxDistance);
         // setCurrentLocation();
         bboxHolder = new BboxHolder();
@@ -57,6 +67,14 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
             }
         });
 
+        Bundle b = getArguments();
+        if(!b.isEmpty()) {
+            if (b.getInt(DISTANCE_KEY, 0) != 0)
+                maxDistance = b.getInt(DISTANCE_KEY);
+            if (b.getString(POI_TYPE_KEY, "empty") != "empty")
+                poi_type = b.getString(POI_TYPE_KEY);
+        }
+
         bboxHolder.calculate(lat, lon, maxDistance);
         new MyOverpassApi<SecondTaskFragment>
                 (
@@ -77,7 +95,7 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
         recyclerView.setAdapter(rvAdapter);
     }
 
-    public void submitOnClick() {
+    private void submitOnClick() {
         // setCurrentLocation();
         bboxHolder.calculate(lat, lon, maxDistance);
         new MyOverpassApi<SecondTaskFragment>
