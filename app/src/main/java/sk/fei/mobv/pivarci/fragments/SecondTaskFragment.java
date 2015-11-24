@@ -46,6 +46,8 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
         complexPreferences = ComplexPreferences.getComplexPreferences(getActivity().getApplicationContext(), AccountGeneral.PREFS, Context.MODE_PRIVATE);
         if(complexPreferences.getObject(DISTANCE_KEY, Integer.class) != null)
             maxDistance = complexPreferences.getObject(DISTANCE_KEY, Integer.class);
+        if(complexPreferences.getObject(POI_TYPE_KEY, String.class) != null)
+            poi_type = complexPreferences.getObject(POI_TYPE_KEY, String.class);
         rvAdapter = new RVAdapter(getActivity(), maxDistance);
         // setCurrentLocation();
         bboxHolder = new BboxHolder();
@@ -54,19 +56,6 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_second_task, container, false);
-
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        recyclerView = (RecyclerView)rootView.findViewById(R.id.poi_rv);
-        recyclerView.setLayoutManager(llm);
-
-        ((TextView) rootView.findViewById(R.id.max_distance_value)).setText(String.valueOf(maxDistance) + "m");
-        Button button = (Button) rootView.findViewById(R.id.refresh_poi);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                submitOnClick();
-            }
-        });
-
         Bundle b = getArguments();
         if(!b.isEmpty()) {
             if (b.getInt(DISTANCE_KEY, 0) != 0)
@@ -74,6 +63,19 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
             if (b.getString(POI_TYPE_KEY, "empty") != "empty")
                 poi_type = b.getString(POI_TYPE_KEY);
         }
+
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        recyclerView = (RecyclerView)rootView.findViewById(R.id.poi_rv);
+        recyclerView.setLayoutManager(llm);
+
+        ((TextView) rootView.findViewById(R.id.max_distance_value)).setText(String.valueOf(maxDistance) + "m");
+        ((TextView) rootView.findViewById(R.id.poi_type_value)).setText(poi_type);
+        Button button = (Button) rootView.findViewById(R.id.refresh_poi);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                submitOnClick();
+            }
+        });
 
         bboxHolder.calculate(lat, lon, maxDistance);
         new MyOverpassApi<SecondTaskFragment>

@@ -36,5 +36,6 @@
     <string name="max_distance_label">Maximálna vzdialenosť:</string>
     <string name="settings_poi_type">Typ miesta záujmu</string>
     <string name="settings_save_button">Uložiť</string>
+    <string name="poi_type_label">Typ POI:</string>
 
 </resources>

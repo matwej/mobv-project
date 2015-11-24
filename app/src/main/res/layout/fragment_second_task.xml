@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -7,10 +7,11 @@
         android:id="@+id/location_label"
         android:text="@string/max_distance_label"
         android:textSize="20sp"
-        android:layout_marginBottom="5sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black_color"/>
+        android:textColor="@color/black_color"
+        android:layout_alignBottom="@+id/max_distance_value"
+        android:layout_alignStart="@+id/poi_type_label" />
 
     <TextView
         android:id="@+id/max_distance_value"
@@ -18,20 +19,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black_color"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/location_label" />
+
+    <TextView
+        android:id="@+id/poi_type_label"
+        android:text="@string/poi_type_label"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_color"
+        android:layout_below="@+id/location_label"
+        android:layout_alignStart="@+id/poi_rv" />
+
+    <TextView
+        android:id="@+id/poi_type_value"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_color"
+        android:layout_alignTop="@+id/poi_type_label"
+        android:layout_toEndOf="@+id/poi_type_label" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/refresh_poi"
         android:id="@+id/refresh_poi"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/poi_type_label"
+        android:layout_centerHorizontal="true" />
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/poi_rv"
-        android:layout_margin="10dp"
         android:background="@color/cardview_light_background"
-        />
-</LinearLayout>
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/refresh_poi" />
+</RelativeLayout>

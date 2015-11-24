@@ -5,9 +5,14 @@
         <item>bar</item>
         <item>cafe</item>
         <item>restaurant</item>
+        <item>fast_food</item>
+        <item>food_court</item>
         <item>college</item>
         <item>library</item>
         <item>school</item>
         <item>university</item>
+        <item>atm</item>
+        <item>bank</item>
+        <item>clinic</item>
     </string-array>
 </resources>
