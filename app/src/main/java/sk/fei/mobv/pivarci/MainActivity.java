@@ -43,6 +43,7 @@ import sk.fei.mobv.pivarci.fragments.GeneralFragment;
 import sk.fei.mobv.pivarci.fragments.ProfileFragment;
 import sk.fei.mobv.pivarci.fragments.SecondTaskFragment;
 import sk.fei.mobv.pivarci.fragments.SettingsFragment;
+import sk.fei.mobv.pivarci.fragments.ThirdTaskFragment;
 import sk.fei.mobv.pivarci.model.User;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 import sk.fei.mobv.pivarci.settings.General;
@@ -53,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
     int[] titleIcons = {
             R.drawable.ic_profile,
             R.drawable.ic_edit,
-            R.drawable.ic_compass
+            R.drawable.ic_compass,
+            android.R.drawable.ic_dialog_email
     };
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
@@ -148,6 +150,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 2:
                 fragment = new SecondTaskFragment();
+                break;
+            case 3:
+                fragment = new ThirdTaskFragment();
                 break;
             default:
                 fragment = new GeneralFragment();

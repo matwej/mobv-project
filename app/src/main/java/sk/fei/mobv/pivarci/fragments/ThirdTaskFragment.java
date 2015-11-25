@@ -1,8 +1,8 @@
 package sk.fei.mobv.pivarci.fragments;
 
 import android.annotation.SuppressLint;
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -38,9 +38,7 @@ import sk.fei.mobv.pivarci.R;
 import sk.fei.mobv.pivarci.model.VolleyMessage;
 import sk.fei.mobv.pivarci.services.VolleyAdapter;
 
-import static com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout.OnRefreshListener;
-
-public class ThirdTaskFragment extends Fragment implements OnRefreshListener {
+public class ThirdTaskFragment extends Fragment implements SwipyRefreshLayout.OnRefreshListener {
 
     public ThirdTaskFragment() {
         // Empty constructor required for fragment subclasses

@@ -4,5 +4,6 @@
         <item>Profil</item>
         <item>Číslo</item>
         <item>Lokácia</item>
+        <item>Chat</item>
     </string-array>
 </resources>
