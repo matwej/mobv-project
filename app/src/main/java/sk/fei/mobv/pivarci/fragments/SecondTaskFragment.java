@@ -20,8 +20,8 @@ import sk.fei.mobv.pivarci.api.OverpassInt;
 import sk.fei.mobv.pivarci.model.LocationItem;
 import sk.fei.mobv.pivarci.services.BboxHolder;
 import sk.fei.mobv.pivarci.services.RVAdapter;
-import sk.fei.mobv.pivarci.settings.General;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
+import sk.fei.mobv.pivarci.settings.General;
 
 public class SecondTaskFragment extends Fragment implements OverpassInt {
 
@@ -32,7 +32,6 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
     private int maxDistance = 2000;
     private String poi_type = "pub";
     private BboxHolder bboxHolder;
-    private ComplexPreferences complexPreferences;
 
     public SecondTaskFragment() {
         // Empty constructor required for fragment subclasses
@@ -40,7 +39,7 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        complexPreferences = ComplexPreferences.getComplexPreferences(getActivity().getApplicationContext(), General.PREFS, Context.MODE_PRIVATE);
+        ComplexPreferences complexPreferences = ComplexPreferences.getComplexPreferences(getActivity().getApplicationContext(), General.PREFS, Context.MODE_PRIVATE);
         if(complexPreferences.getObject(General.DISTANCE_KEY, Integer.class) != null)
             maxDistance = complexPreferences.getObject(General.DISTANCE_KEY, Integer.class);
         if(complexPreferences.getObject(General.POI_TYPE_KEY, String.class) != null)

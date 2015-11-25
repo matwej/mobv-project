@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 import sk.fei.mobv.pivarci.R;
 import sk.fei.mobv.pivarci.model.User;
-import sk.fei.mobv.pivarci.settings.General;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
+import sk.fei.mobv.pivarci.settings.General;
 
 public class ProfileFragment extends Fragment {
 

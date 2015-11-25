@@ -11,8 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import sk.fei.mobv.pivarci.model.User;
-import sk.fei.mobv.pivarci.settings.General;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
+import sk.fei.mobv.pivarci.settings.General;
 
 import static sk.fei.mobv.pivarci.settings.General.S_SERVER_API;
 

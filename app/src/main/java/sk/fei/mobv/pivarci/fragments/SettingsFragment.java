@@ -14,8 +14,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import sk.fei.mobv.pivarci.R;
-import sk.fei.mobv.pivarci.settings.General;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
+import sk.fei.mobv.pivarci.settings.General;
 
 public class SettingsFragment extends Fragment implements AdapterView.OnItemSelectedListener{
 

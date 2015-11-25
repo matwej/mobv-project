@@ -1,7 +1,5 @@
 package sk.fei.mobv.pivarci.services;
 
-import android.util.Log;
-
 public class BboxHolder {
 
     private static double ONE_LAT_IN_M = 110500;

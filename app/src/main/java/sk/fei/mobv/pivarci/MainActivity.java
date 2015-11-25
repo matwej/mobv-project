@@ -44,8 +44,8 @@ import sk.fei.mobv.pivarci.fragments.ProfileFragment;
 import sk.fei.mobv.pivarci.fragments.SecondTaskFragment;
 import sk.fei.mobv.pivarci.fragments.SettingsFragment;
 import sk.fei.mobv.pivarci.model.User;
-import sk.fei.mobv.pivarci.settings.General;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
+import sk.fei.mobv.pivarci.settings.General;
 
 public class MainActivity extends AppCompatActivity {
 
