@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "sk.fei.mobv.project"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -28,6 +28,8 @@ dependencies {
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.google.android.gms:play-services:8.3.0'
     compile 'com.google.android.gms:play-services-location:8.3.0'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.github.orangegangsters:swipy:1.2.1@aar'
 }
 
 android {

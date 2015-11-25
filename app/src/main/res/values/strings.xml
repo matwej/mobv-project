@@ -38,4 +38,8 @@
     <string name="settings_save_button">Uložiť</string>
     <string name="poi_type_label">Typ POI:</string>
 
+    <!-- third task -->
+    <string name="hint_message">správa...</string>
+    <string name="content_description">poslat</string>
+
 </resources>
