@@ -15,5 +15,8 @@ public class General {
     public static final String CHOSEN_POI_ID_KEY = "chosen_poi_id";
     public static final String CHOSEN_POI_NAME_KEY = "chosen_poi_name";
 
+    public static final long UPDATE_INTERVAL = 3000;
+    public static final long FASTEST_INTERVAL = 1000;
+
     public static final ServerApi S_SERVER_API = new MyServerApi();
 }

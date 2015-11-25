@@ -2,13 +2,6 @@
 <items version="2" >
 
     <item
-        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
-        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-c9062f7918d9093c8aa17bc0da7cf98019d2df8b.jar" />
-    </item>
-    <item
         jar="/home/matwej/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -16,25 +9,67 @@
         <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/gson-2.4-f439093e8c48c951bd2b6d1b63bdff1a616ae0f0.jar" />
     </item>
     <item
-        jar="/home/matwej/android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/8.3.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-4a12b5b985fc706737f3dd5aa43a7f2000e33299.jar" />
+        sha1="0a1897426566e408a5c20a3d931f77d89771d07f">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-2bf35126351f2804d118b2b2a83d8645b65de10c.jar" />
     </item>
     <item
-        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.3.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-c2df418efb557626ec2635fb764647d1edd0efbc.jar" />
+        sha1="0c3e81d3eb86b86d194b5cdb6a4de78203f6f7fd">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-e09c715a58af82589d4e2cab31fd5b78db680ee9.jar" />
     </item>
     <item
-        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/8.3.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-d75be0670d94359f6d13d07cbd42006f8575aacb.jar" />
+        sha1="ea34579b1be157cd792376362157e9c54ebb4cd7">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-5fb2e219596a3a6d8ec144299b9500bac23700f2.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6d9ed9a288364688e7fcf6704776284dac1eb42e">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-7b322a2a1911150068516ddeb801f64bdac707ad.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-c9062f7918d9093c8aa17bc0da7cf98019d2df8b.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="fd76d95678a6b2b8a49bb8a9fb5bcef7aedb70e7">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-246a45d415e8eb39877f418591e1c9941a63858e.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="71eda10e33212e44245524b5087366ff8d805825">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-cb617b568a07b254018d621b017be5a8a8ca9d2f.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2c6fcd6267cbac6509a2e72a61127534a1d616cf">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-6646557c6fba275dd03d17d71a078e3647841150.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="01a90bbb9495a8bbf6f3cfdf12f1b35caaa9524b">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-06501589c72c74884bbefbfff4139058d42a56fa.jar" />
     </item>
     <item
         jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
@@ -44,11 +79,25 @@
         <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-a3839f6203dc9e9099e6b96e158c18072cf9f24d.jar" />
     </item>
     <item
-        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-3a2adf19d9037169d011bd8fdf8094d788b566e2.jar" />
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-fae977add1a3501ed1d0a15fade749cb66a514ae.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="27775d59b16610ac76f1b83693fedd9520396332">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-e28a79709c1c58e4d50de9b63ed8d2e3f7d258ac.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4b8df1b1e51fe14b0e89b3845dc2e215a024a09f">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-c8f00d881b762a8270d0f4cbb3d7c9f21e92f41f.jar" />
     </item>
     <item
         jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
@@ -56,6 +105,132 @@
         revision="23.0.1"
         sha1="5c5699834e9722f1c288fea2de82725d078ba127">
         <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-b8dca30b6a03e078ed1703096e699a26bff8df65.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0af4f577b4a21eb9be2a7f52e33b077b67e6d9f8">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-c94533642df58f493b3aec2826a7aeb07dd61667.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="345a1b5cf5b144ce18ba6962bc66a7e2f26c1c1b">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-76116b99306c1e11f493aa2a93f101738feead54.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="cb4af597d079ffdc0984a3ec2c03cbf6a1b9f869">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-47c0630a92cc4dfa1defd7385aa49991477edbc7.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="744c49c02a27569cc4cc049685d3649e4ef439f2">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-271e74a7101e3fdbe0163d5297ae5df4c8403965.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="eb576427887e497cd958a475475f9206e38dc314">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-ca9842337e33633506e97ce690b243697d6d169a.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="77f9593d979f4347344be233bd0d888315f79517">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-1911f470c9dd32ee3ea2c6c4856e75685a2f07ab.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b000ecceb9877fefcdc7ab1959ff03df91551656">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-3ff7c2c66d671b0b91e7d8242bbdc03837e88a34.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-d75be0670d94359f6d13d07cbd42006f8575aacb.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-c2df418efb557626ec2635fb764647d1edd0efbc.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-dcd3ceddb021aaf23847164ee1991b4c3b552cd4.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9aedc597d74c6d77258ce5236e9abff0c3cc65e3">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-8012c3408ff86b0c464b909817c78bc1fb8d981b.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="724ce977487ab3a215d4d2eb47d8dccd9f30013f">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-13df4823b184fc0261f7868c404ef88f98f0145b.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="58adcfbe2c8393765e84c5489d01bba6a5159eb2">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-ceed0657db2e2cb4d49303a9101c52d28ac6b0f9.jar" />
+    </item>
+    <item
+        jar="/home/matwej/android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-4a12b5b985fc706737f3dd5aa43a7f2000e33299.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="697679619b00837e3d09e9988a2e1e2a9009d502">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-4605807c53cc6a39cd9fa6feb00b5490167c64f5.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9c9bdb4b2497465a6cf7d5e8f57c5298f828a380">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-5cef8ff2d5aebd7f0a6728d3a9f7d4dfda6fbfef.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-3a2adf19d9037169d011bd8fdf8094d788b566e2.jar" />
+    </item>
+    <item
+        jar="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="af6ee25641df3142059c0828517aa7ee6eba08d6">
+        <dex dex="/home/matwej/AndroidStudioProjects/mobv-project/app/build/intermediates/pre-dexed/debug/classes-db82eacbbb5e2a95b60036908785a3243e188358.jar" />
     </item>
 
 </items>
