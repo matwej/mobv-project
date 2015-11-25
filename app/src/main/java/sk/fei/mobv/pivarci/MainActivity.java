@@ -38,12 +38,12 @@ import java.util.List;
 
 import sk.fei.mobv.pivarci.drawer.CustomAdapter;
 import sk.fei.mobv.pivarci.drawer.MenuItemObject;
-import sk.fei.mobv.pivarci.fragments.NumberFragment;
-import sk.fei.mobv.pivarci.fragments.GeneralFragment;
-import sk.fei.mobv.pivarci.fragments.ProfileFragment;
-import sk.fei.mobv.pivarci.fragments.PoiFragment;
-import sk.fei.mobv.pivarci.fragments.SettingsFragment;
 import sk.fei.mobv.pivarci.fragments.ChatFragment;
+import sk.fei.mobv.pivarci.fragments.GeneralFragment;
+import sk.fei.mobv.pivarci.fragments.NumberFragment;
+import sk.fei.mobv.pivarci.fragments.PoiFragment;
+import sk.fei.mobv.pivarci.fragments.ProfileFragment;
+import sk.fei.mobv.pivarci.fragments.SettingsFragment;
 import sk.fei.mobv.pivarci.model.User;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 import sk.fei.mobv.pivarci.settings.General;
