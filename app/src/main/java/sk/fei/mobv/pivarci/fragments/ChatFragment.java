@@ -46,7 +46,7 @@ public class ChatFragment extends Fragment implements SwipyRefreshLayout.OnRefre
     public static final String API_KEY = "3C7e56ZRFQcMXXr";
     private static final String URL_SEND = "https://mobv.mcomputing.fei.stuba.sk/index.php?r=message/send";
     private static final String URL_FETCH = "https://mobv.mcomputing.fei.stuba.sk/index.php?r=message/get";
-    private static final String FETCHED_MSGS_LIMIT = "30";
+    private static final String FETCHED_MSGS_LIMIT = "50";
 
     private SwipyRefreshLayout swipyRefreshLayout;
     private Date lastUpdate;
@@ -73,7 +73,7 @@ public class ChatFragment extends Fragment implements SwipyRefreshLayout.OnRefre
         recParams.put("limit", FETCHED_MSGS_LIMIT );
 
         Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.HOUR, -1); // za poslednu hodinu
+        calendar.add(Calendar.MINUTE, -15); // za poslednu hodinu
         lastUpdate = calendar.getTime();
     }
 
@@ -99,20 +99,19 @@ public class ChatFragment extends Fragment implements SwipyRefreshLayout.OnRefre
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendMessage();
+                sendMessage(newMsg.getText().toString());
             }
         });
 
         return view;
     }
 
-    private void sendMessage() {
-        String newText = newMsg.getText().toString();
-        if (!newText.isEmpty()) { // prazdne spravy ee
-            sendParams.put("msg", newText);
+    private void sendMessage(String text) {
+        if (!text.isEmpty()) { // prazdne spravy ee
+            sendParams.put("msg", text);
 
             newMsg.setText("");
-            VolleyMessage msg = createNewVolleyMsg(newText);
+            VolleyMessage msg = createNewVolleyMsg(text);
             adapter.addMessage(msg);
 
             SendResponseListener sendResponseListener = new SendResponseListener(msg);

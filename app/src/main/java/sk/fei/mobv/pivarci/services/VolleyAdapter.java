@@ -67,6 +67,12 @@ public class VolleyAdapter extends RecyclerView.Adapter<VolleyAdapter.VolleyView
                 assert mDrawable != null;
                 mDrawable.setColorFilter(new PorterDuffColorFilter(Color.RED, PorterDuff.Mode.MULTIPLY));
                 holder.statusIcon.setImageDrawable(mDrawable);
+                holder.textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // znovuposlanie msg
+                    }
+                });
             }
             break;
             case VolleyMessage.STATUS_SENDING: {
