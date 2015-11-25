@@ -5,7 +5,6 @@ import android.content.Context;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +46,6 @@ public class RVAdapter extends RecyclerView.Adapter<PoiViewHolder> {
         String distance = String.valueOf(pois.get(i).getDistance());
         String id = String.valueOf(pois.get(i).getId());
 
-        Log.d("onbindview", String.valueOf(pois.size()));
         if(pois.get(i).isClosest()) {
             poiViewHolder.getCv().findViewById(R.id.overpass_cv_rv).setBackgroundColor(ContextCompat.getColor(activity, R.color.dark_green));
             selected = poiViewHolder.getCv();

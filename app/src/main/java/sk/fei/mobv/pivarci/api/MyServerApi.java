@@ -1,7 +1,5 @@
 package sk.fei.mobv.pivarci.api;
 
-import android.util.Log;
-
 import com.google.gson.Gson;
 
 import org.apache.commons.codec.binary.Hex;
@@ -54,8 +52,6 @@ public class MyServerApi implements ServerApi {
             String responseString = EntityUtils.toString(response.getEntity());
 
             if (response.getStatusLine().getStatusCode() != HttpURLConnection.HTTP_OK) {
-                //throw new Exception("Error during log in [" + error.code + "] - " + error.error);
-                Log.d("aaa", "Error during log in!!");
                 return null;
             }
             user = new Gson().fromJson(responseString, User.class);
@@ -79,8 +75,6 @@ public class MyServerApi implements ServerApi {
             String responseString = EntityUtils.toString(response.getEntity());
 
             if (response.getStatusLine().getStatusCode() != HttpURLConnection.HTTP_OK) {
-                //throw new Exception("Error during log in [" + error.code + "] - " + error.error);
-                Log.d("aaa", "Error during log in!!");
                 return -1;
             }
             return i;
