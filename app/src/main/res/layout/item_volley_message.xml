@@ -23,4 +23,13 @@
         android:layout_alignParentRight="true"
         android:src="@android:drawable/sym_action_chat"
         android:tint="@color/light_green" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/msg_timestamp"
+        android:layout_below="@+id/text"
+        android:layout_alignEnd="@+id/text" />
+
 </RelativeLayout>

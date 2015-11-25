@@ -55,6 +55,7 @@ public class VolleyAdapter extends RecyclerView.Adapter<VolleyAdapter.VolleyView
     public void onBindViewHolder(VolleyViewHolder holder, int position) {
         VolleyMessage message = messageList.get(position);
         holder.textView.setText(message.getText());
+        holder.timestampView.setText(message.getSent());
         Drawable mDrawable;
         switch (message.getStatus()) {
             case VolleyMessage.STATUS_SENT:
@@ -87,12 +88,14 @@ public class VolleyAdapter extends RecyclerView.Adapter<VolleyAdapter.VolleyView
     public static class VolleyViewHolder extends RecyclerView.ViewHolder {
 
         TextView textView;
+        TextView timestampView;
         ImageView statusIcon;
 
         public VolleyViewHolder(View itemView) {
             super(itemView);
             textView = (TextView) itemView.findViewById(R.id.text);
             statusIcon = (ImageView) itemView.findViewById(R.id.status);
+            timestampView = (TextView) itemView.findViewById(R.id.msg_timestamp);
         }
     }
 }
