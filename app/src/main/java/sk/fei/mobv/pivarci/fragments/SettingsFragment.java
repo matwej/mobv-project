@@ -71,7 +71,7 @@ public class SettingsFragment extends Fragment implements AdapterView.OnItemSele
         Bundle args = new Bundle();
         args.putString(General.POI_TYPE_KEY, poi_type);
         args.putInt(General.DISTANCE_KEY, maxDistance);
-        Fragment fragment = new SecondTaskFragment();
+        Fragment fragment = new PoiFragment();
         fragment.setArguments(args);
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.main_fragment_container, fragment).commit();

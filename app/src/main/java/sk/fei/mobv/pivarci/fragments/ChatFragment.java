@@ -38,9 +38,9 @@ import sk.fei.mobv.pivarci.R;
 import sk.fei.mobv.pivarci.model.VolleyMessage;
 import sk.fei.mobv.pivarci.services.VolleyAdapter;
 
-public class ThirdTaskFragment extends Fragment implements SwipyRefreshLayout.OnRefreshListener {
+public class ChatFragment extends Fragment implements SwipyRefreshLayout.OnRefreshListener {
 
-    public ThirdTaskFragment() {
+    public ChatFragment() {
         // Empty constructor required for fragment subclasses
     }
 

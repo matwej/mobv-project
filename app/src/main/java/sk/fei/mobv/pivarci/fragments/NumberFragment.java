@@ -16,11 +16,11 @@ import sk.fei.mobv.pivarci.settings.General;
 
 import static sk.fei.mobv.pivarci.settings.General.S_SERVER_API;
 
-public class FirstTaskFragment extends Fragment {
+public class NumberFragment extends Fragment {
 
     private ComplexPreferences complexPreferences;
 
-    public FirstTaskFragment() {
+    public NumberFragment() {
         // Empty constructor required for fragment subclasses
     }
 

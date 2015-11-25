@@ -31,7 +31,7 @@ import sk.fei.mobv.pivarci.services.RVAdapter;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 import sk.fei.mobv.pivarci.settings.General;
 
-public class SecondTaskFragment extends Fragment implements OverpassInt, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+public class PoiFragment extends Fragment implements OverpassInt, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     private RVAdapter rvAdapter;
     private RecyclerView recyclerView;
@@ -43,7 +43,7 @@ public class SecondTaskFragment extends Fragment implements OverpassInt, GoogleA
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;
 
-    public SecondTaskFragment() {
+    public PoiFragment() {
         // Empty constructor required for fragment subclasses
     }
 
@@ -98,7 +98,7 @@ public class SecondTaskFragment extends Fragment implements OverpassInt, GoogleA
         });
 
         bboxHolder.calculate(lat, lon, maxDistance);
-        new MyOverpassApi<SecondTaskFragment>
+        new MyOverpassApi<PoiFragment>
                 (
                         this,
                         poi_type,
@@ -119,7 +119,7 @@ public class SecondTaskFragment extends Fragment implements OverpassInt, GoogleA
 
     private void submitOnClick() {
         bboxHolder.calculate(lat, lon, maxDistance);
-        new MyOverpassApi<SecondTaskFragment>
+        new MyOverpassApi<PoiFragment>
                 (
                         this,
                         poi_type,
