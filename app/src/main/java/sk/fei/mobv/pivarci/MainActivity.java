@@ -44,7 +44,7 @@ import sk.fei.mobv.pivarci.fragments.ProfileFragment;
 import sk.fei.mobv.pivarci.fragments.SecondTaskFragment;
 import sk.fei.mobv.pivarci.fragments.SettingsFragment;
 import sk.fei.mobv.pivarci.model.User;
-import sk.fei.mobv.pivarci.settings.AccountGeneral;
+import sk.fei.mobv.pivarci.settings.General;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 
 public class MainActivity extends AppCompatActivity {
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         LayoutInflater inflater = getLayoutInflater();
         View listHeaderView = inflater.inflate(R.layout.header_list, null, false);
         // set preferences
-        complexPreferences = ComplexPreferences.getComplexPreferences(getApplicationContext(), AccountGeneral.PREFS, MODE_PRIVATE);
+        complexPreferences = ComplexPreferences.getComplexPreferences(getApplicationContext(), General.PREFS, MODE_PRIVATE);
         // set drawer header content
         TextView username = (TextView) listHeaderView.findViewById(R.id.profile_username);
         username.setText(complexPreferences.getObject(AccountManager.KEY_ACCOUNT_NAME,String.class));

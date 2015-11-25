@@ -12,10 +12,10 @@ import android.text.TextUtils;
 
 import sk.fei.mobv.pivarci.AuthenticatorActivity;
 import sk.fei.mobv.pivarci.model.User;
-import sk.fei.mobv.pivarci.settings.AccountGeneral;
+import sk.fei.mobv.pivarci.settings.General;
 
 import static android.accounts.AccountManager.KEY_BOOLEAN_RESULT;
-import static sk.fei.mobv.pivarci.settings.AccountGeneral.S_SERVER_API;
+import static sk.fei.mobv.pivarci.settings.General.S_SERVER_API;
 
 public class MyAuthenticator extends AbstractAccountAuthenticator {
 
@@ -73,7 +73,7 @@ public class MyAuthenticator extends AbstractAccountAuthenticator {
             result.putString(AccountManager.KEY_ACCOUNT_NAME, account.name);
             result.putString(AccountManager.KEY_ACCOUNT_TYPE, account.type);
             result.putString(AccountManager.KEY_AUTHTOKEN, authToken);
-            result.putParcelable(AccountGeneral.ARG_USER, user);
+            result.putParcelable(General.ARG_USER, user);
             return result;
         }
 
@@ -92,7 +92,7 @@ public class MyAuthenticator extends AbstractAccountAuthenticator {
 
     @Override
     public String getAuthTokenLabel(String authTokenType) {
-        return AccountGeneral.AUTHTOKEN_TYPE;
+        return General.AUTHTOKEN_TYPE;
     }
 
     @Override

@@ -11,10 +11,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import sk.fei.mobv.pivarci.model.User;
-import sk.fei.mobv.pivarci.settings.AccountGeneral;
+import sk.fei.mobv.pivarci.settings.General;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 
-import static sk.fei.mobv.pivarci.settings.AccountGeneral.S_SERVER_API;
+import static sk.fei.mobv.pivarci.settings.General.S_SERVER_API;
 
 public class AuthenticatorActivity extends AccountAuthenticatorActivity {
     public final static String ARG_ACCOUNT_TYPE = "ACCOUNT_TYPE";
@@ -24,7 +24,7 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
     public final static String PARAM_USER_PASS = "USER_PASS";
 
     private AccountManager mAccountManager;
-    private String mAuthTokenType = AccountGeneral.ACCOUNT_TYPE;
+    private String mAuthTokenType = General.ACCOUNT_TYPE;
 
     @Override
     protected void onCreate(Bundle icicle) {
@@ -35,7 +35,7 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
         String accountName = getIntent().getStringExtra(ARG_ACCOUNT_NAME);
         mAuthTokenType = getIntent().getStringExtra(ARG_AUTH_TYPE);
         if (mAuthTokenType == null)
-            mAuthTokenType = AccountGeneral.ACCOUNT_TYPE;
+            mAuthTokenType = General.ACCOUNT_TYPE;
 
         if (accountName != null) {
             ((TextView) findViewById(R.id.login)).setText(accountName);
@@ -64,7 +64,7 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
         final String userName = ((TextView) findViewById(R.id.login)).getText().toString();
         final String userPass = ((TextView) findViewById(R.id.password)).getText().toString();
 
-        final String accountType = AccountGeneral.ACCOUNT_TYPE;
+        final String accountType = General.ACCOUNT_TYPE;
 
         new AsyncTask<String, Void, Intent>() {
 
@@ -79,7 +79,7 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
                     data.putString(AccountManager.KEY_ACCOUNT_TYPE, accountType);
                     data.putString(AccountManager.KEY_AUTHTOKEN, user.getSession_token());
                     data.putString(PARAM_USER_PASS, userPass);
-                    ComplexPreferences complexPreferences = ComplexPreferences.getComplexPreferences(getApplicationContext(), AccountGeneral.PREFS, MODE_PRIVATE);
+                    ComplexPreferences complexPreferences = ComplexPreferences.getComplexPreferences(getApplicationContext(), General.PREFS, MODE_PRIVATE);
                     complexPreferences.putObject("user", user);
                     complexPreferences.putObject(AccountManager.KEY_ACCOUNT_NAME, userName);
                     complexPreferences.commit();

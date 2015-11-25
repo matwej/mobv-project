@@ -11,10 +11,10 @@ import android.widget.TextView;
 
 import sk.fei.mobv.pivarci.R;
 import sk.fei.mobv.pivarci.model.User;
-import sk.fei.mobv.pivarci.settings.AccountGeneral;
+import sk.fei.mobv.pivarci.settings.General;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 
-import static sk.fei.mobv.pivarci.settings.AccountGeneral.S_SERVER_API;
+import static sk.fei.mobv.pivarci.settings.General.S_SERVER_API;
 
 public class FirstTaskFragment extends Fragment {
 
@@ -29,7 +29,7 @@ public class FirstTaskFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_first_task, container, false);
 
-        complexPreferences = ComplexPreferences.getComplexPreferences(getActivity(), AccountGeneral.PREFS, Context.MODE_PRIVATE);
+        complexPreferences = ComplexPreferences.getComplexPreferences(getActivity(), General.PREFS, Context.MODE_PRIVATE);
         final User user = complexPreferences.getObject("user", User.class);
 
         TextView mId = (TextView) rootView.findViewById(R.id.results_id);

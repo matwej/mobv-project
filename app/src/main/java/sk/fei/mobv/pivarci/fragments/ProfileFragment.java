@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import sk.fei.mobv.pivarci.R;
 import sk.fei.mobv.pivarci.model.User;
-import sk.fei.mobv.pivarci.settings.AccountGeneral;
+import sk.fei.mobv.pivarci.settings.General;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 
 public class ProfileFragment extends Fragment {
@@ -24,7 +24,7 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        ComplexPreferences complexPreferences = ComplexPreferences.getComplexPreferences(getActivity(), AccountGeneral.PREFS, Context.MODE_PRIVATE);
+        ComplexPreferences complexPreferences = ComplexPreferences.getComplexPreferences(getActivity(), General.PREFS, Context.MODE_PRIVATE);
         final User user = complexPreferences.getObject("user", User.class);
 
         TextView id = (TextView) rootView.findViewById(R.id.profile_id);

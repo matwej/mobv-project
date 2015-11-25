@@ -20,13 +20,10 @@ import sk.fei.mobv.pivarci.api.OverpassInt;
 import sk.fei.mobv.pivarci.model.LocationItem;
 import sk.fei.mobv.pivarci.services.BboxHolder;
 import sk.fei.mobv.pivarci.services.RVAdapter;
-import sk.fei.mobv.pivarci.settings.AccountGeneral;
+import sk.fei.mobv.pivarci.settings.General;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 
 public class SecondTaskFragment extends Fragment implements OverpassInt {
-
-    public static final String DISTANCE_KEY = "distance";
-    public static final String POI_TYPE_KEY = "poitype";
 
     private RVAdapter rvAdapter;
     private RecyclerView recyclerView;
@@ -43,12 +40,12 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        complexPreferences = ComplexPreferences.getComplexPreferences(getActivity().getApplicationContext(), AccountGeneral.PREFS, Context.MODE_PRIVATE);
-        if(complexPreferences.getObject(DISTANCE_KEY, Integer.class) != null)
-            maxDistance = complexPreferences.getObject(DISTANCE_KEY, Integer.class);
-        if(complexPreferences.getObject(POI_TYPE_KEY, String.class) != null)
-            poi_type = complexPreferences.getObject(POI_TYPE_KEY, String.class);
-        rvAdapter = new RVAdapter(getActivity(), maxDistance);
+        complexPreferences = ComplexPreferences.getComplexPreferences(getActivity().getApplicationContext(), General.PREFS, Context.MODE_PRIVATE);
+        if(complexPreferences.getObject(General.DISTANCE_KEY, Integer.class) != null)
+            maxDistance = complexPreferences.getObject(General.DISTANCE_KEY, Integer.class);
+        if(complexPreferences.getObject(General.POI_TYPE_KEY, String.class) != null)
+            poi_type = complexPreferences.getObject(General.POI_TYPE_KEY, String.class);
+        rvAdapter = new RVAdapter(getActivity());
         // setCurrentLocation();
         bboxHolder = new BboxHolder();
     }
@@ -58,10 +55,10 @@ public class SecondTaskFragment extends Fragment implements OverpassInt {
         View rootView = inflater.inflate(R.layout.fragment_second_task, container, false);
         Bundle b = getArguments();
         if(!b.isEmpty()) {
-            if (b.getInt(DISTANCE_KEY, 0) != 0)
-                maxDistance = b.getInt(DISTANCE_KEY);
-            if (b.getString(POI_TYPE_KEY, "empty") != "empty")
-                poi_type = b.getString(POI_TYPE_KEY);
+            if (b.getInt(General.DISTANCE_KEY, 0) != 0)
+                maxDistance = b.getInt(General.DISTANCE_KEY);
+            if (b.getString(General.POI_TYPE_KEY, "empty") != "empty")
+                poi_type = b.getString(General.POI_TYPE_KEY);
         }
 
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
