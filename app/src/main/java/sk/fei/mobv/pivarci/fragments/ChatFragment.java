@@ -47,32 +47,47 @@ public class ChatFragment extends Fragment implements SwipyRefreshLayout.OnRefre
     public static final String API_KEY = "3C7e56ZRFQcMXXr";
     private static final String URL_SEND = "https://mobv.mcomputing.fei.stuba.sk/index.php?r=message/send";
     private static final String URL_FETCH = "https://mobv.mcomputing.fei.stuba.sk/index.php?r=message/get";
+    private static final String FETCHED_MSGS_LIMIT = "30";
+
     private SwipyRefreshLayout swipyRefreshLayout;
     private Date lastUpdate;
     private RequestQueue queue;
     private RecyclerView recyclerView;
     private VolleyAdapter adapter;
-    private TextView newMessage;
-    private long messageIDs;
+    private TextView newMsg;
+    private long ids;
     private DateFormat dateFormat;
+    HashMap<String, String> sendParams;
+    HashMap<String, String> recParams;
 
     @SuppressLint("SimpleDateFormat")
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        ids = -1;
+        sendParams = new HashMap<>();
+        sendParams.put("api_key", API_KEY);
+        sendParams.put("msg", "");
+        recParams = new HashMap<>();
+        recParams.put("api_key", API_KEY);
+        recParams.put("limit", FETCHED_MSGS_LIMIT );
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.HOUR, -1); // za poslednu hodinu
+        lastUpdate = calendar.getTime();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        messageIDs = -1;
         View view = inflater.inflate(R.layout.fragment_volley, container, false);
         swipyRefreshLayout = (SwipyRefreshLayout) view.findViewById(R.id.swipeRefresh);
         swipyRefreshLayout.setOnRefreshListener(this);
         swipyRefreshLayout.setColorSchemeResources(
-                android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light,
-                android.R.color.holo_orange_light,
-                android.R.color.holo_red_light);
+                android.R.color.holo_green_dark,
+                android.R.color.holo_green_light,
+                android.R.color.holo_green_dark);
 
         queue = Volley.newRequestQueue(getActivity());
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
@@ -80,7 +95,7 @@ public class ChatFragment extends Fragment implements SwipyRefreshLayout.OnRefre
         adapter = new VolleyAdapter(inflater, getActivity());
         recyclerView.setAdapter(adapter);
 
-        newMessage = (TextView) view.findViewById(R.id.messageText);
+        newMsg = (TextView) view.findViewById(R.id.messageText);
         ImageButton sendButton = (ImageButton) view.findViewById(R.id.sendMessage);
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,59 +104,55 @@ public class ChatFragment extends Fragment implements SwipyRefreshLayout.OnRefre
             }
         });
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.MINUTE, -30);
-        lastUpdate = calendar.getTime();
-
         return view;
     }
 
     private void sendMessage() {
-        String newMessageText = newMessage.getText().toString();
-        if (!newMessageText.isEmpty()) {
-            HashMap<String, String> params = new HashMap<>();
-            params.put("api_key", API_KEY);
-            params.put("msg", newMessageText);
-            newMessage.setText("");
-            VolleyMessage message = new VolleyMessage();
-            message.setId(messageIDs--);
-            message.setSent(dateFormat.format(new Date()));
-            message.setText(newMessageText);
-            message.setStatus(VolleyMessage.STATUS_SENDING);
-            adapter.addMessage(message);
-            SendResponseListener sendResponseListener = new SendResponseListener(message);
-            JsonObjectRequest req = new JsonObjectRequest(URL_SEND, new JSONObject(params), sendResponseListener, sendResponseListener);
+        String newText = newMsg.getText().toString();
+        if (!newText.isEmpty()) { // prazdne spravy ee
+            sendParams.put("msg", newText);
+
+            newMsg.setText("");
+            VolleyMessage msg = createNewVolleyMsg(newText);
+            adapter.addMessage(msg);
+
+            SendResponseListener sendResponseListener = new SendResponseListener(msg);
+            JsonObjectRequest req = new JsonObjectRequest(URL_SEND, new JSONObject(sendParams), sendResponseListener, sendResponseListener);
             queue.add(req);
         }
     }
 
+    private VolleyMessage createNewVolleyMsg(String text) {
+        return new VolleyMessage(ids--,text, dateFormat.format(new Date()), VolleyMessage.STATUS_SENDING);
+    }
+
     @Override
     public void onRefresh(SwipyRefreshLayoutDirection direction) {
-        HashMap<String, String> params = new HashMap<>();
-        params.put("api_key", API_KEY);
-        params.put("from", Long.toString(lastUpdate.getTime() / 1000));
-        params.put("limit", Integer.toString(50));
-        final Date temp = lastUpdate;
+        recParams.put("from", Long.toString(lastUpdate.getTime() / 1000));
+
+        final Date before = lastUpdate;
         lastUpdate = new Date();
-        JsonArrayRequest req = new JsonArrayRequest(URL_FETCH, new JSONObject(params),
+
+        JsonArrayRequest req = new JsonArrayRequest(
+                URL_FETCH,
+                new JSONObject(recParams),
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
                         swipyRefreshLayout.setRefreshing(false);
-                        Type messageListType = new TypeToken<List<VolleyMessage>>() {
-                        }.getType();
-                        List<VolleyMessage> messages = new Gson().fromJson(response.toString(), messageListType);
+                        List<VolleyMessage> messages = new Gson().fromJson(response.toString(), new TypeToken<List<VolleyMessage>>() {}.getType());
                         adapter.addMessages(messages);
                         recyclerView.scrollToPosition(adapter.getItemCount() - 1);
                     }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                lastUpdate = temp;
-                VolleyLog.e("Error: ", error.getMessage());
-                swipyRefreshLayout.setRefreshing(false);
-            }
-        });
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        lastUpdate = before; // nepresiel refresh
+                        VolleyLog.e("Error: ", error.getMessage());
+                        swipyRefreshLayout.setRefreshing(false);
+                    }
+                });
         queue.add(req);
     }
 

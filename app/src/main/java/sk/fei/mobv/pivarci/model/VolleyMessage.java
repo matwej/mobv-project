@@ -9,7 +9,7 @@ public class VolleyMessage {
     private String sent;
     private int status = STATUS_SENT;
 
-    public VolleyMessage(Long id, boolean isMyMessage, String text, String sent, int status) {
+    public VolleyMessage(Long id, String text, String sent, int status) {
         this.id = id;
         this.text = text;
         this.sent = sent;
