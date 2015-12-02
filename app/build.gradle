@@ -17,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    useLibrary 'org.apache.http.legacy'
+    dexOptions {
+        incremental true
+    }
 }
 
 dependencies {
@@ -30,8 +34,4 @@ dependencies {
     compile 'com.google.android.gms:play-services-location:8.3.0'
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile 'com.github.orangegangsters:swipy:1.2.1@aar'
-}
-
-android {
-    useLibrary 'org.apache.http.legacy'
 }

@@ -172,9 +172,7 @@ public class PoiFragment extends Fragment implements OverpassInt, GoogleApiClien
     @Override
     public void onLocationChanged(Location location) {
         lat = location.getLatitude();
-        Log.d("LAT", String.format("%.5g", lat));
         lon = location.getLongitude();
-        Log.d("LON", String.format("%.5g", lon));
     }
 
     @Override

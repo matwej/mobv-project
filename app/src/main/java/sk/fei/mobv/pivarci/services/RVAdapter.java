@@ -61,7 +61,7 @@ public class RVAdapter extends RecyclerView.Adapter<PoiViewHolder> {
             public void onClick(View v) {
                 selected.findViewById(R.id.overpass_cv_rv).setBackgroundColor(ContextCompat.getColor(activity, R.color.light_green));
                 selected = (CardView) v;
-                v.findViewById(R.id.overpass_cv_rv).setBackgroundColor(ContextCompat.getColor(activity, R.color.dark_green));
+                v.findViewById(R.id.overpass_cv_rv).setBackgroundColor(ContextCompat.getColor(activity, R.color.green));
                 ComplexPreferences complexPreferences = ComplexPreferences.getComplexPreferences(activity.getApplicationContext(), General.PREFS, Context.MODE_PRIVATE);
                 complexPreferences.putObject(General.CHOSEN_POI_ID_KEY, ((TextView) v.findViewById(R.id.overpass_cv_id)).getText());
                 complexPreferences.putObject(General.CHOSEN_POI_NAME_KEY, ((TextView) v.findViewById(R.id.overpass_cv_name)).getText());

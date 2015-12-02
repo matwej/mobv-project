@@ -65,6 +65,17 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar topToolBar;
     private ComplexPreferences complexPreferences;
 
+    public User getUser() {
+        return user;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    private String username;
+    private User user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,11 +93,14 @@ public class MainActivity extends AppCompatActivity {
         View listHeaderView = inflater.inflate(R.layout.header_list, null, false);
         // set preferences
         complexPreferences = ComplexPreferences.getComplexPreferences(getApplicationContext(), General.PREFS, MODE_PRIVATE);
+        // set user
+        user = complexPreferences.getObject("user", User.class);
+        username = getIntent().getStringExtra(AccountManager.KEY_ACCOUNT_NAME);
         // set drawer header content
         TextView username = (TextView) listHeaderView.findViewById(R.id.profile_username);
         username.setText(complexPreferences.getObject(AccountManager.KEY_ACCOUNT_NAME,String.class));
         TextView full_name = (TextView) listHeaderView.findViewById(R.id.profile_name);
-        full_name.setText(complexPreferences.getObject("user", User.class).getFullName());
+        full_name.setText(user.getFullName());
         mDrawerList.addHeaderView(listHeaderView);
         // set drawer menu items
         titles = getResources().getStringArray(R.array.nav_items);

@@ -11,6 +11,18 @@ import sk.fei.mobv.pivarci.R;
 public class PoiViewHolder extends RecyclerView.ViewHolder {
     CardView cv;
     TextView id;
+    TextView name;
+    TextView distance;
+    ImageView icon;
+
+    public PoiViewHolder(View itemView) {
+        super(itemView);
+        cv = (CardView)itemView.findViewById(R.id.overpass_cv);
+        id = (TextView)itemView.findViewById(R.id.overpass_cv_id);
+        name = (TextView)itemView.findViewById(R.id.overpass_cv_name);
+        distance = (TextView)itemView.findViewById(R.id.overpass_cv_distance);
+        icon = (ImageView)itemView.findViewById(R.id.overpass_cv_icon);
+    }
 
     public CardView getCv() {
         return cv;
@@ -50,18 +62,5 @@ public class PoiViewHolder extends RecyclerView.ViewHolder {
 
     public void setIcon(ImageView icon) {
         this.icon = icon;
-    }
-
-    TextView name;
-    TextView distance;
-    ImageView icon;
-
-    public PoiViewHolder(View itemView) {
-        super(itemView);
-        cv = (CardView)itemView.findViewById(R.id.overpass_cv);
-        id = (TextView)itemView.findViewById(R.id.overpass_cv_id);
-        name = (TextView)itemView.findViewById(R.id.overpass_cv_name);
-        distance = (TextView)itemView.findViewById(R.id.overpass_cv_distance);
-        icon = (ImageView)itemView.findViewById(R.id.overpass_cv_icon);
     }
 }

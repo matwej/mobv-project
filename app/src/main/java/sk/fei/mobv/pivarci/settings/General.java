@@ -19,4 +19,5 @@ public class General {
     public static final long FASTEST_INTERVAL = 1000;
 
     public static final ServerApi S_SERVER_API = new MyServerApi();
+    public static final String API_KEY = "3C7e56ZRFQcMXXr";
 }
