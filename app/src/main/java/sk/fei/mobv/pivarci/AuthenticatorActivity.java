@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import sk.fei.mobv.pivarci.model.User;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 import sk.fei.mobv.pivarci.settings.General;
@@ -31,6 +34,15 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
         super.onCreate(icicle);
         setContentView(R.layout.activity_login);
         mAccountManager = AccountManager.get(getBaseContext());
+        List<Account> accounts = filterAccounts(mAccountManager.getAccounts());
+        if (accounts.size() == 1) {
+            Intent main = new Intent(getBaseContext(), MainActivity.class);
+            main.putExtra(ARG_ACCOUNT_NAME, accounts.get(0).name);
+            startActivity(main);
+            finish();
+        } else if (accounts.size() > 1) {
+            throw new RuntimeException("Multiple accounts not supported");
+        }
 
         String accountName = getIntent().getStringExtra(ARG_ACCOUNT_NAME);
         mAuthTokenType = getIntent().getStringExtra(ARG_AUTH_TYPE);
@@ -127,5 +139,15 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
         Intent main = new Intent(getBaseContext(), MainActivity.class);
         startActivity(main);
         finish();
+    }
+
+    private List<Account> filterAccounts(Account[] accounts) {
+        List<Account> filteredAccounts = new ArrayList<>();
+        for (Account account : accounts) {
+            if (account.type.equals(General.ACCOUNT_TYPE)) {
+                filteredAccounts.add(account);
+            }
+        }
+        return filteredAccounts;
     }
 }
