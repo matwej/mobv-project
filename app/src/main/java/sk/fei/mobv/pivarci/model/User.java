@@ -4,7 +4,16 @@ package sk.fei.mobv.pivarci.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class User {
+public class User implements Parcelable {
+    public static final Creator<User> CREATOR = new Creator<User>() {
+        public User createFromParcel(Parcel source) {
+            return new User(source);
+        }
+
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
 
     private String first_name;
     private String last_name;
@@ -12,6 +21,13 @@ public class User {
     private int user_id;
 
     public User() {
+    }
+
+    protected User(Parcel in) {
+        this.first_name = in.readString();
+        this.last_name = in.readString();
+        this.session_token = in.readString();
+        this.user_id = in.readInt();
     }
 
     public String getFirst_name() {
@@ -48,5 +64,18 @@ public class User {
 
     public String getFullName() {
         return String.format("%s, %s",getLast_name(), getFirst_name());
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.first_name);
+        dest.writeString(this.last_name);
+        dest.writeString(this.session_token);
+        dest.writeInt(this.user_id);
     }
 }
