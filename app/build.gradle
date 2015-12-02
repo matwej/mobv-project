@@ -18,9 +18,6 @@ android {
         }
     }
     useLibrary 'org.apache.http.legacy'
-    dexOptions {
-        incremental true
-    }
 }
 
 dependencies {

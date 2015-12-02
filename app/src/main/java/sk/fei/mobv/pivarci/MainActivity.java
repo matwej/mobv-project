@@ -39,6 +39,7 @@ import java.util.List;
 import sk.fei.mobv.pivarci.drawer.CustomAdapter;
 import sk.fei.mobv.pivarci.drawer.MenuItemObject;
 import sk.fei.mobv.pivarci.fragments.ChatFragment;
+import sk.fei.mobv.pivarci.fragments.ChatPoiFragment;
 import sk.fei.mobv.pivarci.fragments.GeneralFragment;
 import sk.fei.mobv.pivarci.fragments.NumberFragment;
 import sk.fei.mobv.pivarci.fragments.PoiFragment;
@@ -55,7 +56,8 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.ic_profile,
             R.drawable.ic_edit,
             R.drawable.ic_compass,
-            android.R.drawable.ic_dialog_email
+            android.R.drawable.ic_dialog_email,
+            android.R.drawable.star_big_on
     };
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
@@ -167,6 +169,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 3:
                 fragment = new ChatFragment();
+                break;
+            case 4:
+                fragment = new ChatPoiFragment();
                 break;
             default:
                 fragment = new GeneralFragment();
