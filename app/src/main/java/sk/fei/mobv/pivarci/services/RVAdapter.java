@@ -8,11 +8,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
 import sk.fei.mobv.pivarci.R;
+import sk.fei.mobv.pivarci.fragments.PoiFragment;
 import sk.fei.mobv.pivarci.model.LocationItem;
 import sk.fei.mobv.pivarci.settings.ComplexPreferences;
 import sk.fei.mobv.pivarci.settings.General;
@@ -23,6 +27,7 @@ public class RVAdapter extends RecyclerView.Adapter<PoiViewHolder> {
     private LayoutInflater layoutInflater;
     private Activity activity;
     private CardView selected;
+    private LocationItem li;
 
     public RVAdapter(Activity activity) {
         layoutInflater = LayoutInflater.from(activity);
@@ -46,9 +51,18 @@ public class RVAdapter extends RecyclerView.Adapter<PoiViewHolder> {
         String distance = String.valueOf(pois.get(i).getDistance());
         String id = String.valueOf(pois.get(i).getId());
 
-        if(pois.get(i).isClosest()) {
-            poiViewHolder.getCv().findViewById(R.id.overpass_cv_rv).setBackgroundColor(ContextCompat.getColor(activity, R.color.dark_green));
+        ComplexPreferences complexPreferences = ComplexPreferences.getComplexPreferences(activity.getApplicationContext(), General.PREFS, Context.MODE_PRIVATE);
+        int maxd = complexPreferences.getObject(General.DISTANCE_KEY, Integer.class);
+        String d2 = "0";
+        if (selected != null){
+            String dist = ((TextView) selected.findViewById(R.id.overpass_cv_distance)).getText().toString();
+            d2 = dist.substring(0, dist.length() - 2);
+        }
+
+        if((pois.get(i).isClosest() && selected == null) || Integer.parseInt(d2) > maxd) {
+            poiViewHolder.getCv().findViewById(R.id.overpass_cv_rv).setBackgroundColor(ContextCompat.getColor(activity, R.color.green));
             selected = poiViewHolder.getCv();
+            li = pois.get(i);
         }
 
         poiViewHolder.getId().setText(id);

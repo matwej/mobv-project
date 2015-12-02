@@ -153,7 +153,7 @@ public class PoiFragment extends Fragment implements OverpassInt, GoogleApiClien
         return list;
     }
 
-    private static String distance(double lat1, double lon1, double lat2, double lon2) {
+    public static String distance(double lat1, double lon1, double lat2, double lon2) {
         double theta = lon1 - lon2;
         double dist = Math.sin(BboxHolder.deg2rad(lat1))
                 * Math.sin(BboxHolder.deg2rad(lat2))

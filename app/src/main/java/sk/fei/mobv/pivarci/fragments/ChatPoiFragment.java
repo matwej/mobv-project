@@ -128,11 +128,11 @@ public class ChatPoiFragment extends Fragment implements SwipyRefreshLayout.OnRe
             sendParams.put("poi_type", "node");
             sendParams.put("poi_name", fav_name);
             sendParams.put("msg", msg.getText().toString());
-            msg.setText("");
             PoiMessage message = new PoiMessage();
             message.setUsername(m.getUsername());
             message.setSent(dateFormat.format(new Date()));
             message.setText(msg.getText().toString());
+            msg.setText("");
             message.setStatus(PoiMessage.STATUS_SENDING);
             message.setPoi_name(fav_name);
             poiMessageAdapter.addMessage(message);

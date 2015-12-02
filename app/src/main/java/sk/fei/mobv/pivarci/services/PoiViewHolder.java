@@ -13,6 +13,7 @@ public class PoiViewHolder extends RecyclerView.ViewHolder {
     TextView id;
     TextView name;
     TextView distance;
+
     ImageView icon;
 
     public PoiViewHolder(View itemView) {
